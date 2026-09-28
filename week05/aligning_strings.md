@@ -9,8 +9,8 @@ prefix of $X_m$ with the length $j$ prefix of $Y_n$:
 
 $$
 \begin{equation}
-P(i,j) = \min \left \{ P(i-1,j-1) + a_{x_{i-1}\,y_{j-1}},\quad
-P(i-1,j)+a_{\text{gap}},\quad P(i,j-1)+a_{\text{gap}} \right \}
+P(i,j) = \min \left ( P(i-1,j-1) + a_{x_{i-1}\,y_{j-1}},\quad
+P(i-1,j)+a_{\text{gap}},\quad P(i,j-1)+a_{\text{gap}} \right )
 \end{equation}
 $$
 
