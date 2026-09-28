@@ -7,10 +7,10 @@ Two weeks ago, in class and in
 recurrence for $P(i,j)$, the cost of optimally aligning the length-$i$
 prefix of $X_m$ with the length $j$ prefix of $Y_n$:
 
-$$
+\begin{equation}
 P(i,j) = \min \left \{ P(i-1,j-1) + a_{x_{i-1}\,y_{j-1}},\quad
 P(i-1,j)+a_{\text{gap}},\quad P(i,j-1)+a_{\text{gap}} \right \}
-$$
+\end{equation}
 
 and you wrote the code that fills in the entire table (assignment:
 [`string_alignment_assignment.md`](../week03/string_alignment_assignment.md);
