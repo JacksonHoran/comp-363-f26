@@ -5,7 +5,7 @@
 Two weeks ago, in class and in
 [`string_alignment.ipynb`](../week03/string_alignment.ipynb), we derived the
 recurrence for $P(i,j)$, the cost of optimally aligning the length-$i$
-prefix of $X_m$ with the length-$j$ prefix of $Y_n$:
+prefix of $X_m$ with the length $j$ prefix of $Y_n$:
 
 $$
 P(i,j) = \min \left \{ P(i-1,j-1) + a_{x_{i-1}\,y_{j-1}},\quad
