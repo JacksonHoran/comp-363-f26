@@ -64,29 +64,7 @@ Once `label_components` works, add two small things on top of it:
   views of the same underlying fact. If they ever disagree on the same
   graph, which one would you trust less, and why?
 
-## Checking your work
 
-A labeling is correct as a *grouping*, not as a specific set of numbers —
-relabeling every `0` to `2` and every `2` to `0` throughout is still
-correct, as long as vertices that belong together still share a label and
-vertices that don't, don't. Check your output against these graphs that
-way, not number-for-number:
-
-| Graph | Vertices | Edges | Expected grouping | Expected count |
-|---|---|---|---|---|
-| Class example | 0–5 | 0–1, 0–2, 3–4 | $\{0,1,2\}$, $\{3,4\}$, $\{5\}$ | 3 |
-| No edges | 0–3 | (none) | $\{0\}$, $\{1\}$, $\{2\}$, $\{3\}$ | 4 |
-| Complete graph $K_4$ | 0–3 | every pair | $\{0,1,2,3\}$ | 1 |
-| Two triangles | 0–5 | 0–1, 1–2, 0–2, 3–4, 4–5, 3–5 | $\{0,1,2\}$, $\{3,4,5\}$ | 2 |
-| A path | 0–4 | 0–1, 1–2, 2–3, 3–4 | $\{0,1,2,3,4\}$ | 1 |
-
-For the class example and the two triangles, also confirm your "largest
-component" logic picks a three-vertex group (there's a tie — either is a
-correct answer). For at least one graph produced by
-`create_random_undirected_graph`, confirm that the number of distinct
-labels `label_components` produces matches what `count_components` reports
-for that same graph — they're built from the same primitive, so a
-disagreement means a bug in one of them, not a modeling choice.
 
 ## Something to think about, not to hand in
 
